@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task Manager</title>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Task Manager</h1>
+        <form id="task-form" class="mb-4">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="task-name" class="form-control" placeholder="Task Name" required>
+                </div>
+                <div class="col">
+                    <input type="date" id="start-date" class="form-control" required>
+                </div>
+                <div class="col">
+                    <input type="date" id="end-date" class="form-control" required>
+                </div>
+                <div class="col">
+                    <input type="text" id="responsible" class="form-control" placeholder="Responsible" required>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-block">Add Task</button>
+                </div>
+            </div>
+        </form>
+        <div class="form-row mb-4">
+            <div class="col">
+                <input type="text" id="search-task" class="form-control" placeholder="Search Tasks">
+            </div>
+            <div class="col">
+                <button class="btn btn-secondary btn-block" onclick="filterTasks('all')">All</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-secondary btn-block" onclick="filterTasks('resolved')">Resolved</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-secondary btn-block" onclick="filterTasks('overdue')">Overdue</button>
+            </div>
+        </div>
+        <ul id="task-list" class="list-group"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

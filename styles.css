@@ -1,0 +1,13 @@
+.list-group-item-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.list-group-item-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.list-group-item {
+    background-color: #ffffff;
+}
